@@ -6,27 +6,99 @@
     <title>PaceLink Freight</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   <div class="img absolute -z-10 md:hidden">
-    <img src="logistic website mob.jpg" alt="" style="opacity: 0.8;">
+   <!-- <div class="img absolute -z-10 md:hidden">
+    <img src="logistic website mob.jpg" alt="" style="opacity: 0.3;">
    </div>
 
-   <div class="img hidden md:block lgL:hidden">
-    <img src="logistic website tab.jpg" alt="" style="opacity: 0.8;">
+   <div class="img absolute -z-10 hidden md:block lgL:hidden">
+    <img src="logistic website tab.jpg" alt="" style="opacity: 0.3;">
+   </div> -->
+
+   <div class="img absolute w-full -z-10 hidden xl:flex justify-center">
+    <img src="logistic website des.jpg" alt="" style="opacity: 0.3;">
    </div>
 
-   <div class="img hidden lgL:block">
-    <img src="logistic website des.jpg" alt="" style="opacity: 0.8;">
+
+
+
+
+
+   <nav class="flex justify-around items-center pt-[48px] md:px-[70px] lg:justify-center">
+    <div class="links hidden md:flex gap-4 lg:gap-8">
+      <a class="text[15px] font-medium" href="#">ABOUT</a>
+      <a class="text[15px]" href="#">SERVICES</a>
+      <a class="text[15px]" href="#">CONTACT</a>
+    </div>
+
+    <a href="index.html"><img class="w-36 lg:w-[200px] lg:mx-[220px]" src="logo.svg" alt="logo"></a>
+
+     <div class="svg">
+        <svg class="cursor-pointer md:hidden" width="27" height="18" viewBox="0 0 27 18" fill="#EA0E00" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H27V3H0V0ZM0 7.5H27V10.5H0V7.5ZM0 15H27V18H0V15Z" />
+            </svg>
+     </div>
+
+     <div class="button color-bg-red  gap-3 items-center py-2 px-3 hidden md:flex">
+      <a href="#"><button class="uppercase text-white">track my order</button></a>
+      <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.93262 7.17212L1.55508 12.5497L0.210938 11.2055L4.9164 6.50004L0.210938 1.79459L1.55508 0.450439L6.93262 5.82797C7.11082 6.00624 7.21094 6.24798 7.21094 6.50004C7.21094 6.75211 7.11082 6.99385 6.93262 7.17212Z" fill="white"/>
+        </svg>
+        
+     </div>
+
+   </nav>
+
+   <!-- hero text -->
+   <div class="hero-text flex justify-center flex-col mt-5 text-center px-[24px] md:mt-16 md:px-[70px]">
+    <div class="h1 text-[32px] font-bold leading-7 md:text-[36px] lg:text-[60px] lg:leading-[61px] lg:w-[900px] lg:mx-auto">
+      <h1 class="hh ">Multimodal Logistics <span class="color-red">Trade</span> Everything you need we have!</h1>
+    </div>
+
+    <div class="text-[20px] mt-2 md:mt-4 lg:w-[1000px] lg:mx-auto">
+      <p >Streamline your logistics with PaceLink Freight. We offer comprehensive solutions tailored to your needs. Our services are reliable, efficient, and designed to keep your business moving forward smoothly</p>
+    </div>
    </div>
 
+   <!-- hero picture -->
+   <div class="heroimg flex justify-center gap-3 items-end mt-6 px-[24px]">
 
+    <div class="f hidden md:flex flex-col gap-3 ">
+      <img class="w-[263px]" src="img/1.jpg" alt="hero">
+      <h1 class="color-red text-[28px] w-[215px] uppercase font-semibold leading-7 mt-12"><span class="text-[64px] uppercase">All</span> in one Deshboard</h1>
+      <p class="font-[16px] w-[210px]">Manage logistics easily with our dashboard. Track, monitor, and optimize operations, reducing costs efficiently</p>
+    </div>
 
-    <h1 class="text-3xl font-bold underline lgL:text-9xl">
-        Hello world!
-      </h1>
+    <div class="s flex flex-col gap-3">
+      <h1 class="w-[142px] text-[28px] font-semibold leading-7 md:w-[200px]"><span class="text-[48px]">Track</span> parsel by app</h1>
+      <p class="hidden md:block w-[200px]">Track shipments with our app. Monitor deliveries in real-time, staying updated with instant notifications</p>
+      <img class="w-[263px]" src="img/2.jpg" alt="hero">
+    </div>
+
+    <div class="t md:flex flex-col gap-3">
+      <img class="w-[263px]" src="img/3.jpg" alt="hero">
+      <img class="w-[263px]" src="img/4.jpg" alt="hero">
+    </div>
+
+    <div class="f hidden lg:flex flex-col gap-3">
+      <h1 class="text-[28px] uppercase font-semibold w-[200px] leading-7"><span class="text-[64px]">99%</span> Positive review</h1>
+      <p class="w-[200px]">Clients trust us to deliver. Our 99% positive reviews reflect our commitment to excellent service</p>
+      <img class="w-[263px]" src="img/5.jpg" alt="hero">
+    </div>
+
+   </div>
+
+   <!-- delivery cal -->
+    <div class="dev text-center mt-3">
+      <h1 class="text-[28px] font-bold md:text-[36px] lg:text-[40px]"> Delivery calculator</h1>
+      <p class="text-[16px] px-[24px] md:px-[70px] lg:w-[788px] lg:mx-auto">Use our Delivery Calculator to estimate shipping costs instantly. Enter your details, and get accurate quotes tailored to your needs, ensuring transparent pricing and helping you plan effectively</p>
+    </div>
+
+     
     
 </body>
 </html>
