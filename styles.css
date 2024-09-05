@@ -35,11 +35,17 @@ p{
     color:#FFFFFF;
   }
 
-  .img img{
+  .color-grey{
+    background-color:#F3F3F3;
+  }
+
+
+
+  .img1 img{
     width: 1440px;
 }
 
-.img{
+.img1{
     display: flex;
     justify-content: center;
 
