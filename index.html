@@ -13,32 +13,32 @@
     <link rel="stylesheet" href="styles.css">
     <script src="custom.js"></script>
 </head>
-<body class="font-inter">
+<body class="font-inter loading">
 
-   <nav class="navigaror flex justify-around items-center pt-12 md:px-16 lg:justify-center">
-      <div class="hidden md:flex gap-4 lg:gap-8">
-          <a class="text-[15px] font-medium" href="about.html">ABOUT</a>
-          <a class="text-[15px]" href="#">SERVICES</a>
-          <a class="text-[15px]" href="#">CONTACT</a>
-      </div>
-
-      <a href="index.html">
-          <img class="w-36 lg:w-[200px] lg:mx-[220px]" src="logo.svg" alt="logo">
-      </a>
-
-      <div class="svg cursor-pointer md:hidden">
-          <svg width="27" height="18" viewBox="0 0 27 18" fill="#EA0E00" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0H27V3H0V0ZM0 7.5H27V10.5H0V7.5ZM0 15H27V18H0V15Z"/>
-          </svg>
-      </div>
-
-      <div class="hidden md:flex items-center gap-3 py-2 px-3 bg-red-600">
-          <a href="#"><button class="uppercase text-white">Track my order</button></a>
-          <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.93262 7.17212L1.55508 12.5497L0.210938 11.2055L4.9164 6.50004L0.210938 1.79459L1.55508 0.450439L6.93262 5.82797C7.11082 6.00624 7.21094 6.24798 7.21094 6.50004C7.21094 6.75211 7.11082 6.99385 6.93262 7.17212Z" fill="white"/>
-          </svg>
-      </div>
-   </nav>
+  <nav id="nav" class="navigaror flex justify-around items-center pt-12 md:px-16 lg:justify-center sticky top-0 bg-white z-50 pb-3">
+    <div class="hidden md:flex gap-4 lg:gap-8">
+        <a class="text-[15px] font-medium" href="about.html">ABOUT</a>
+        <a class="text-[15px]" href="services.html">SERVICES</a>
+        <a class="text-[15px]" href="contact.html">CONTACT</a>
+    </div>
+  
+    <a href="index.html">
+        <img class="w-36 lg:w-[200px] lg:mx-[220px]" src="logo.svg" alt="logo">
+    </a>
+  
+    <div class="svg cursor-pointer md:hidden">
+        <svg width="27" height="18" viewBox="0 0 27 18" fill="#EA0E00" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0H27V3H0V0ZM0 7.5H27V10.5H0V7.5ZM0 15H27V18H0V15Z"/>
+        </svg>
+    </div>
+  
+    <div class="hidden md:flex items-center gap-3 py-2 px-3 bg-red-600">
+        <a href="#"><button class="uppercase text-white">Track my order</button></a>
+        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.93262 7.17212L1.55508 12.5497L0.210938 11.2055L4.9164 6.50004L0.210938 1.79459L1.55508 0.450439L6.93262 5.82797C7.11082 6.00624 7.21094 6.24798 7.21094 6.50004C7.21094 6.75211 7.11082 6.99385 6.93262 7.17212Z" fill="white"/>
+        </svg>
+    </div>
+  </nav>
 
    <div class="mobile-menu fixed inset-0 z-50 flex flex-col items-center gap-14 bg-white p-16 transform -translate-x-full">
 
@@ -48,9 +48,9 @@
       </svg>
 
       <div class="flex flex-col items-center gap-14">
-          <a class="text-4xl font-bold uppercase" href="#">About</a>
-          <a class="text-4xl font-bold uppercase" href="#">Services</a>
-          <a class="text-4xl font-bold uppercase" href="#">Contact</a>
+          <a class="text-4xl font-bold uppercase" href="about.html">About</a>
+          <a class="text-4xl font-bold uppercase" href="services.html">Services</a>
+          <a class="text-4xl font-bold uppercase" href="contact.html">Contact</a>
       </div>
 
       <div class="flex items-center gap-3 py-2 px-3 bg-red-600">

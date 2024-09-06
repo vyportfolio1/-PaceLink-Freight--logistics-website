@@ -12,7 +12,25 @@ p{
 }
 
  
+/* Hide elements until page is loaded */
+body.loading .navigaror,
+body.loading .hero-text,
+body.loading .heroimg {
+  visibility: hidden;
+}
 
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Hide loader after the animation */
+body.loaded .loader {
+  display: none;
+}
 
 /* :root {
     --red: #EA0E00;
