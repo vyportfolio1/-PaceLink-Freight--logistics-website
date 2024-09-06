@@ -32,13 +32,6 @@ body.loaded .loader {
   display: none;
 }
 
-/* :root {
-    --red: #EA0E00;
-    --black: #0B0B0B;
-    --white: #FFFFFF;
-    --font-inter: 'Inter', sans-serif;
-    --lgL: 1440px;
-  } */
 
   .color-red{
     color:#EA0E00;
