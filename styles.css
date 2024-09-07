@@ -25,12 +25,12 @@ body.loading .heroimg {
   justify-content: center;
   font-size: 24px;
   font-weight: bold;
-}
+} */
 
 /* Hide loader after the animation */
 body.loaded .loader {
   display: none;
-}
+} 
 
 
   .color-red{
@@ -56,14 +56,4 @@ body.loaded .loader {
     color:#F3F3F3;
   }
 
-
-
-  .img1 img{
-    width: 1440px;
-}
-
-.img1{
-    display: flex;
-    justify-content: center;
-
-}
+ 
