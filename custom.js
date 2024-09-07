@@ -13,6 +13,8 @@ function toggleFAQ(faqNumber) {
     }
   }
 
+
+
   document.addEventListener('DOMContentLoaded', function () {
     const menuButton = document.querySelector('.svg');
     const mobileMenu = document.querySelector('.mobile-menu');
@@ -151,3 +153,29 @@ window.onload = function () {
       '-=0.4'
   );
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Show trackerr when track button is clicked
+    document.getElementById('trackButton').addEventListener('click', function () {
+      const trackerr = document.getElementById('trackerr');
+      trackerr.classList.remove('hidden');
+      setTimeout(() => {
+        trackerr.classList.remove('opacity-0');
+        trackerr.classList.add('opacity-100');
+      }, 10);
+    });
+
+    // Hide trackerr when close button is clicked
+    document.getElementById('closeButton').addEventListener('click', function () {
+      const trackerr = document.getElementById('trackerr');
+      trackerr.classList.add('opacity-0');
+      setTimeout(() => {
+        trackerr.classList.add('hidden');
+      }, 500); // Wait for the animation to finish before hiding it
+    });
+
+    // Show popup message when ggtrack button is clicked
+    document.getElementById('ggtrack').addEventListener('click', function () {
+      alert("Relax, it's coming!");
+    });
+  });
