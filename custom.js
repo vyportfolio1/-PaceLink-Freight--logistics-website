@@ -124,15 +124,15 @@ window.onload = function () {
     const trr = document.querySelector('.trr');  
     const positive = document.querySelector('.positive');
   
-    // Remove loading state
+ 
     body.classList.remove('loading');
     body.classList.add('loaded');
   
     const tl = gsap.timeline();
   
-    // Fade out loader and show the content
+  
     tl.to(loader, { opacity: 0, duration: 0.5, onComplete: () => {
-        loader.style.display = 'none';  // Hide loader after fade-out
+        loader.style.display = 'none';   
     }})
     
     .fromTo(body, 
@@ -140,13 +140,13 @@ window.onload = function () {
         { backgroundColor: '#FFFFFF', duration: 0.7, ease: 'power2.out' }
     )
   
-    // Show navigation
+ 
     .fromTo(nav, 
         { y: -50, opacity: 0 }, 
         { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' }
     )
   
-    // Animate hero text and images
+ 
     .fromTo(heroText, 
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, duration: 0.9, ease: 'power2.out' }, 
@@ -180,7 +180,7 @@ window.onload = function () {
   };
   
   document.addEventListener('DOMContentLoaded', function() {
-      // Show trackerr when track button is clicked
+    
       document.getElementById('trackButton').addEventListener('click', function () {
         const trackerr = document.getElementById('trackerr');
         trackerr.classList.remove('hidden');
@@ -190,17 +190,167 @@ window.onload = function () {
         }, 10);
       });
   
-      // Hide trackerr when close button is clicked
+     
       document.getElementById('closeButton').addEventListener('click', function () {
         const trackerr = document.getElementById('trackerr');
         trackerr.classList.add('opacity-0');
         setTimeout(() => {
           trackerr.classList.add('hidden');
-        }, 500); // Wait for the animation to finish before hiding it
+        }, 500);  
       });
   
-      // Show popup message when ggtrack button is clicked
+  
       document.getElementById('ggtrack').addEventListener('click', function () {
         alert("Relax, it's coming!");
       });
     });
+
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    document.addEventListener('DOMContentLoaded', function () {
+        gsap.from(".delivery, .namestuff, .phone, .product, .pick, .delivery, .button-del, .image-container img", {
+            opacity: 0,
+            y: 50,
+            duration: 1.5,
+            stagger: 0.2,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: ".delivery",
+              start: "top 80%",
+              toggleActions: "play none none reverse"
+            }
+          });
+});
+
+ 
+
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', function() {
+// Animation for the "About us" section
+gsap.from(".sec, .imn img, .del h1, .del p, .buttons", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  stagger: 0.3,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".sec",
+    start: "top 80%",
+    toggleActions: "play none none none" // No repetition after animation
+  }
+})
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function() {
+// Animation for the "Workers" section
+gsap.from(".team .worker", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  stagger: 0.2,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".team",
+    start: "top 80%",
+    toggleActions: "play none none none" // No repetition after animation
+  }
+});
+
+// Animation for the heading and paragraph
+gsap.from(".team-heading, .team-subheading", {
+  opacity: 0,
+  y: 30,
+  duration: 1,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".team-heading",
+    start: "top 90%",
+    toggleActions: "play none none none"
+  }
+})
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function() {
+// Animation for the Quote section image and text
+gsap.from(".q img", {
+  opacity: 0,
+  scale: 1.2,
+  duration: 1.5,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".q",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+gsap.from(".q h1", {
+  opacity: 0,
+  y: 50,
+  duration: 1.5,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".q",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+
+// Animation for "Our Services" text section
+gsap.from(".lg\\:w-[512px], .lg\\:w-[419px]", {
+  opacity: 0,
+  y: 30,
+  duration: 1.5,
+  stagger: 0.3,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".lg\\:w-[512px]",
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+})
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function() {
+// Animation for each service card
+gsap.registerPlugin(ScrollTrigger);
+
+// Animation for each service card
+gsap.from(".ic", {
+  opacity: 0,
+  y: 30,
+  duration: 1.5,
+  stagger: 0.3,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".allall",
+    start: "top 110%",  
+    toggleActions: "play none none none"
+  }
+});
+
+// Animation for the entire services container
+gsap.from(".allall", {
+  opacity: 0,
+  scale: 0.9,
+  duration: 1.5,
+  ease: "power4.out",
+  scrollTrigger: {
+    trigger: ".allall",
+    start: "top 110%",  
+    toggleActions: "play none none none"
+  }
+});
+});
+
+ 
+ 
