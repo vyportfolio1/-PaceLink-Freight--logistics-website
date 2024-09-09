@@ -15,7 +15,8 @@ p{
 /* Hide elements until page is loaded */
 body.loading .navigaror,
 body.loading .hero-text,
-body.loading .heroimg {
+body.loading .heroimg,
+body.loading .drob {
   visibility: hidden;
 }
 

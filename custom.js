@@ -319,38 +319,270 @@ gsap.from(".lg\\:w-[512px], .lg\\:w-[419px]", {
 });
 
 
-gsap.registerPlugin(ScrollTrigger);
-document.addEventListener('DOMContentLoaded', function() {
-// Animation for each service card
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', function () {
+ 
+  gsap.registerPlugin(ScrollTrigger);
 
-// Animation for each service card
-gsap.from(".ic", {
-  opacity: 0,
-  y: 30,
-  duration: 1.5,
-  stagger: 0.3,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: ".allall",
-    start: "top 110%",  
-    toggleActions: "play none none none"
-  }
-});
+  const qSection = document.querySelector('.q');
+  const servSection = document.querySelector('.serv');
 
-// Animation for the entire services container
-gsap.from(".allall", {
-  opacity: 0,
-  scale: 0.9,
-  duration: 1.5,
-  ease: "power4.out",
-  scrollTrigger: {
-    trigger: ".allall",
-    start: "top 110%",  
-    toggleActions: "play none none none"
-  }
-});
-});
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: qSection,
+      start: "top 80%",  
+      toggleActions: "play none none none",  
+    }
+  });
 
  
+  tl.fromTo(qSection.querySelector('img'), 
+      { opacity: 0, y: 50 }, 
+      { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }
+    )
+    .fromTo(qSection.querySelector('h1'), 
+      { opacity: 0, y: 50 }, 
+      { opacity: 1, y: 0, duration: 1, ease: 'power2.out' }, 
+      '-=0.7' 
+    );
+
+  
+  gsap.fromTo(servSection, 
+    { opacity: 0, y: 50 }, 
+    { opacity: 1, y: 0, duration: 1, ease: 'power2.out', 
+      scrollTrigger: {
+        trigger: servSection,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      }
+    }
+  );
+});
+
+// services
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const serviceItems = document.querySelectorAll('.allse .ic');
+
+  gsap.fromTo(serviceItems, 
+    { opacity: 0, y: 50 }, 
+    {
+      opacity: 1, 
+      y: 0, 
+      stagger: 0.2, 
+      duration: 1, 
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.allalls', 
+        start: 'top 80%',  
+        toggleActions: 'play none none none',  
+      }
+    }
+  );
+});
+
+// testemonials
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  
+  gsap.fromTo('.test, .trust', 
+    { opacity: 0, y: 50 }, 
+    {
+      opacity: 1, 
+      y: 0, 
+      duration: 1, 
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.test',  
+        start: 'top 90%', 
+        toggleActions: 'play none none none',
+      }
+    }
+  );
+
+  
+  const testimonialItems = document.querySelectorAll('.g .user');
+
+  gsap.fromTo(testimonialItems, 
+    { opacity: 0, y: 50 }, 
+    {
+      opacity: 1, 
+      y: 0, 
+      stagger: 0.2, 
+      duration: 1, 
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.g',  
+        start: 'top 85%', 
+        toggleActions: 'play none none none',
+      }
+    }
+  );
+});
+
+// faq
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
  
+  const faqAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".faq",  
+      start: "top 80%",  
+      toggleActions: "play none none none",  
+    }
+  });
+
+  faqAnimation
+    .from(".faq p", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    })
+    .from(".faq h1", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.6")
+    .from(".faq-section", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.6")
+    .from(".faq-item", {
+      opacity: 0,
+      y: 30,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.6");
+});
+
+// footer
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const allfAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".allf",  
+      start: "top 70%",  
+      toggleActions: "play none none none",  
+    }
+  });
+
+  allfAnimation
+    .from(".h svg", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    })
+    .from(".h p", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.5")
+    .from(".inf", {
+      opacity: 0,
+      y: 50,
+      stagger: 0.2,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.5")
+    .from(".f", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.5");
+});
+
+// about page
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const aboutTextAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about-text",  
+      start: "top 80%",  
+      toggleActions: "play none none none",  
+    }
+  });
+
+  aboutTextAnimation
+    .from(".h1 h1", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    })
+    .from(".h1 .color-red", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.8,
+      ease: "back.out(1.7)"  
+    }, "-=0.5")
+    .from(".about-text p", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.3")
+    .from(".about-picture img", {
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.3");
+});
+
+
+// services page
+
+document.addEventListener('DOMContentLoaded', function () {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const servicesTextAnimation = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".services-text",  
+      start: "top 80%",  
+      toggleActions: "play none none none",  
+    }
+  });
+
+  servicesTextAnimation
+    .from(".h2 h1", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    })
+    .from(".h2 .color-red", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.8,
+      ease: "back.out(1.7)"  
+    }, "-=0.5")
+    .from(".services-text p", {
+      opacity: 0,
+      y: 50,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.3")
+    .from(".services-picture img", {
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.8,
+      ease: "power2.out"
+    }, "-=0.3");
+});
